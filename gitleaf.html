@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>gitleaf</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>gitleaf</h2>
+        <div id="auth-section">
+            <h3>github authentication</h3>
+            <input type="text" id="github-token" placeholder="github personal access token">
+            <button id="save-token">save token</button>
+        </div>
+        <div id="repo-section" style="display: none;">
+            <h3>repository settings</h3>
+            <input type="text" id="repo-owner" placeholder="repository owner">
+            <input type="text" id="repo-name" placeholder="repository name">
+        </div>
+        <div id="sync-section" style="display: none;">
+            <h3>sync settings</h3>
+            <select id="sync-interval">
+                <option value="5">every 5 minutes</option>
+                <option value="15">every 15 minutes</option>
+                <option value="30">every 30 minutes</option>
+                <option value="60">every hour</option>
+                <option value="-1">manual</option>
+            </select>
+            <button id="start-sync">start syncing</button>
+            <button id="stop-sync" style="display: none; background-color: #cf222e;">stop syncing</button>
+        </div>
+        <div id="status-section">
+            <h3>status</h3>
+            <div id="status-message" class="status"></div>
+            <div>last sync: <span id="last-sync">never</span></div>
+        </div>
+    </div>
+    <script></script>
+</body>
+</html>
